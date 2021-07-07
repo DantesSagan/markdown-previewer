@@ -7,12 +7,12 @@ class MarkDown extends React.Component {
     super(props);
     this.state = {
       edit: [],
-      preview: ""
+      preview: '',
     };
   }
   render() {
     return (
-      <body className="body">
+      <body className='body'>
         <div
           className='container-fluid d-flex align-items-center justify-content-center'
           id='editor'
@@ -20,11 +20,12 @@ class MarkDown extends React.Component {
           <div className='d-flex card' id=''>
             <div className='card-body' id=''>
               <div className='card-header card-edit'>
-                <h4>Editor</h4>
+                <div className='header-bar'>
+                  Editor
+                  <i className='fa fa-arrows-alt' aria-hidden='true'></i>
+                </div>
               </div>
-              <textarea 
-              value={this.state.preview}
-              >
+              <textarea value={this.state.preview}>
                 <p>Hello there!!!</p>
               </textarea>
             </div>
@@ -37,11 +38,17 @@ class MarkDown extends React.Component {
           <div className='d-flex card card-preview' id=''>
             <div className='card-body' id=''>
               <div className='card-header card-preview'>
-                <h4>Preview</h4>
+                <div className='header-bar'>
+                  Previewer
+                  <i className='fa fa-arrows-alt' aria-hidden='true'></i>
+                </div>
               </div>
-              <textarea className="preview-textarea">
-                <p>Hello there!!!</p>
-              </textarea>
+              <div className='preview'>
+                <h1>Hello there!!!</h1>
+                <hr />
+                <h2>Hello there!!!</h2>
+                <hr />
+              </div>
             </div>
           </div>
         </div>
