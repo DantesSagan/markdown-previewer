@@ -1,6 +1,14 @@
 /* 
 ELEMENTS
 */
+
+img {
+  border: 2px solid bisque;
+  background: transparent;
+  display: block;
+  margin: 2rem auto;
+  width: 90%;
+}
 textarea {
   border: 0.25px solid;
   border-style: none;

@@ -1,19 +1,66 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+const textholder = `
+# Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+
+Heres some code, \`<div></div>\`, between 2 backticks.
+
+## dangerouslySetInnerHTML
+
+**_dangerouslySetInnerHTML_** is React’s replacement for using **_innerHTML_** in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly from React, but you have to type out _dangerouslySetInnerHTML_ and pass an object with a __html key, to remind yourself that it’s dangerous. For example:
+\`\`\`
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
+\`\`\`
+
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+
+There's also [links](https://www.freecodecamp.org), and
+> Block Quotes!
+
+And if you want to get really crazy, even tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbered lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![DantesSagan Logo](linkedin_banner_image_1.png)
+`;
 
 let marked = require('marked');
-
 class MarkDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      markdown: "",
+      markdown: textholder,
       edit: false,
       preview: false,
     };
   }
-  updatedMarkdown = function(markdown) {
+  updatedMarkdown = function (markdown) {
     this.setState({
       markdown,
     });
@@ -51,7 +98,7 @@ class MarkDown extends React.Component {
         </div>
         <section className='container-fluid d-flex align-items-center justify-content-center'>
           <textarea
-          placeholder={"Enter text"}
+            placeholder={'Enter text'}
             value={this.state.markdown}
             id='editor'
             type='text'
@@ -73,7 +120,7 @@ class MarkDown extends React.Component {
                 <div className='header-bar'>
                   Previewer
                   <i className='fa fa-arrows-alt' aria-hidden='true'></i>
-                </div>  
+                </div>
               </div>
               <div
                 id='preview'
