@@ -7,11 +7,11 @@ const textholder = `
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
-Heres some code, \`<div></div>\`, between 2 backticks.
+Here's some code, \`<div></div>\`, between 2 backticks.
 
 ## dangerouslySetInnerHTML
 
-**_dangerouslySetInnerHTML_** is React’s replacement for using **_innerHTML_** in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly from React, but you have to type out _dangerouslySetInnerHTML_\n and pass an object with a __html key, to remind yourself that it’s dangerous.\n For example:
+**_dangerouslySetInnerHTML_**\n is React’s replacement for using **_innerHTML_** in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly from React, but you have to type out _dangerouslySetInnerHTML_\n and pass an object with a __html key, to remind yourself that it’s dangerous.\n For example:
 \`\`\`
 // this is multi-line code:
 
@@ -65,7 +65,9 @@ class MarkDown extends React.Component {
   }
   
   updatedMarkdown = function (markdown) {
-  
+  marked.setOptions({
+    breaks: true
+  })
     this.setState({
       markdown,
     });
