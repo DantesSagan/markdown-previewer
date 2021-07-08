@@ -6,10 +6,11 @@ textarea {
   border-style: none;
   width: 500px;
   height: 100px;
+  resize: vertical;
 }
 
 p {
-  font-size: 28px;
+  font-size: 28px; 
 }
 
 
@@ -35,6 +36,10 @@ CLASSES
   display: inline-block;
 }
 
+.fa:hover {
+  color:rgb(216, 161, 93)
+}
+
 .card-edit {
   width: 500px;
 }
@@ -52,7 +57,6 @@ CLASSES
   border: 1px solid rgba(255, 255, 255, 0.18);
   justify-content: center;
   align-items: center;
-  width: 500px;
 }
 
 .preview {
@@ -84,10 +88,10 @@ CLASSES
 ID
 */
 
-#editor {
+#ed {
   margin-top: 50px;
 }
 
-#preview {
+#pre {
   margin-top: 50px;
 }

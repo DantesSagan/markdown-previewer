@@ -2,38 +2,70 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
+let marked = require('marked');
+
 class MarkDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      edit: [],
-      preview: '',
+      markdown: "",
+      edit: false,
+      preview: false,
     };
+  }
+  updatedMarkdown = function(markdown) {
+    this.setState({
+      markdown,
+    });
+  };
+  handleEditMax() {
+    this.setState(() => ({
+      edit: !this.state.edit,
+    }));
+  }
+  handlePreviewMax() {
+    this.setState(() => ({
+      preview: !this.state.preview,
+    }));
+  }
+  handleChange() {
+    this.setState((e) => ({
+      markdown: e.target.value,
+    }));
   }
   render() {
     return (
-      <body className='body'>
+      <div className='body'>
         <div
           className='container-fluid d-flex align-items-center justify-content-center'
-          id='editor'
+          id='ed'
         >
-          <div className='d-flex card' id=''>
-            <div className='card-body' id=''>
-              <div className='card-header card-edit'>
-                <div className='header-bar'>
-                  Editor
-                  <i className='fa fa-arrows-alt' aria-hidden='true'></i>
-                </div>
+          <div className='d-flex card'>
+            <div className='card-header card-edit'>
+              <div className='header-bar'>
+                Editor
+                <i className='fa fa-arrows-alt' aria-hidden='true'></i>
               </div>
-              <textarea value={this.state.preview}>
-                <p>Hello there!!!</p>
-              </textarea>
             </div>
           </div>
         </div>
+        <section className='container-fluid d-flex align-items-center justify-content-center'>
+          <textarea
+          placeholder={"Enter text"}
+            value={this.state.markdown}
+            id='editor'
+            type='text'
+            className='d-flex card align-items-center justify-content-center'
+            onChange={(event) => {
+              this.updatedMarkdown(event.target.value);
+            }}
+          >
+            <p>Hello there!!!</p>
+          </textarea>
+        </section>
         <div
           className='container-fluid d-flex align-items-center justify-content-center'
-          id='preview'
+          id='pre'
         >
           <div className='d-flex card card-preview' id=''>
             <div className='card-body' id=''>
@@ -41,18 +73,19 @@ class MarkDown extends React.Component {
                 <div className='header-bar'>
                   Previewer
                   <i className='fa fa-arrows-alt' aria-hidden='true'></i>
-                </div>
+                </div>  
               </div>
-              <div className='preview'>
-                <h1>Hello there!!!</h1>
-                <hr />
-                <h2>Hello there!!!</h2>
-                <hr />
-              </div>
+              <div
+                id='preview'
+                dangerouslySetInnerHTML={{
+                  __html: marked(this.state.markdown),
+                }}
+                className='preview'
+              ></div>
             </div>
           </div>
         </div>
-      </body>
+      </div>
     );
   }
 }
