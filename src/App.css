@@ -4,7 +4,6 @@ ELEMENTS
 
 img {
   border: 2px solid bisque;
-  background: transparent;
   display: block;
   margin: 2rem auto;
   width: 90%;
@@ -57,7 +56,7 @@ CLASSES
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.89);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
