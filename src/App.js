@@ -11,15 +11,18 @@ Heres some code, \`<div></div>\`, between 2 backticks.
 
 ## dangerouslySetInnerHTML
 
-**_dangerouslySetInnerHTML_** is React’s replacement for using **_innerHTML_** in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly from React, but you have to type out _dangerouslySetInnerHTML_ and pass an object with a __html key, to remind yourself that it’s dangerous. For example:
+**_dangerouslySetInnerHTML_** is React’s replacement for using **_innerHTML_** in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly from React, but you have to type out _dangerouslySetInnerHTML_\n and pass an object with a __html key, to remind yourself that it’s dangerous.\n For example:
 \`\`\`
 // this is multi-line code:
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
+function createMarkup() {
+  return {__html: 'First &middot; Second'};
 }
+
+function MyComponent() {
+  return <div dangerouslySetInnerHTML={createMarkup()} />;
+}
+
 \`\`\`
 
 You can also make text **bold**... whoa!
@@ -60,7 +63,9 @@ class MarkDown extends React.Component {
       preview: false,
     };
   }
+  
   updatedMarkdown = function (markdown) {
+  
     this.setState({
       markdown,
     });
