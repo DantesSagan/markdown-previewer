@@ -37,13 +37,26 @@ CLASSES
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-.fa {
+.text {
+  padding-right: 5px;
+  border-right: 2px solid;
+  border-radius: 1px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.fa-pencil {
+  padding-right: 5px;
+  border-right: 2px solid;
+  border-radius: 1px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.max {
   margin-left: auto;
   display: inline-block;
 }
 
-.fa:hover {
+.max:hover {
   color:rgb(216, 161, 93)
 }
 
