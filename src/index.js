@@ -4,9 +4,7 @@ import './index.css';
 import MarkDown from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <MarkDown />
-  </React.StrictMode>,
+    <MarkDown />,
   document.getElementById('root')
 );
 
