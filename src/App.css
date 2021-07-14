@@ -17,10 +17,8 @@ textarea {
 }
 
 p {
-  font-size: 28px; 
+  font-size: 28px;
 }
-
-
 
 /* 
 CLASSES
@@ -57,7 +55,7 @@ CLASSES
 }
 
 .max:hover {
-  color:rgb(216, 161, 93)
+  color: rgb(216, 161, 93);
 }
 
 .card-edit {
@@ -113,4 +111,354 @@ ID
 
 #pre {
   margin-top: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* 
+ELEMENTS
+*/
+
+  img {
+    border: 2px solid bisque;
+    display: block;
+    margin: 1rem auto;
+    width: 70%;
+  }
+  textarea {
+    border: 0.25px solid;
+    border-style: none;
+    width: 400px;
+    height: 50px;
+    resize: vertical;
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  /* 
+CLASSES
+*/
+
+  .header-bar {
+    align-items: center;
+    display: flex;
+    padding: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0.5;
+    box-shadow: 0 16px 64px 0 rgba(58, 66, 187, 0.651);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .text {
+    padding-right: 5px;
+    border-right: 2px solid;
+    border-radius: 1px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .fa-pencil {
+    padding-right: 5px;
+    border-right: 2px solid;
+    border-radius: 1px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .max {
+    margin-left: auto;
+    display: inline-block;
+  }
+
+  .max:hover {
+    color: rgb(216, 161, 93);
+  }
+
+  .card-edit {
+    width: 400px;
+  }
+
+  .card-header-preview {
+    width: 600px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.89);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preview {
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    padding: 20px;
+  }
+
+  .preview-output {
+    width: 800px;
+  }
+
+  .card-preview {
+    box-shadow: 0 32px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 800px;
+  }
+
+  .body {
+    background-color: bisque;
+  }
+
+  /* 
+ID
+*/
+
+  #ed {
+    margin-top: 50px;
+  }
+
+  #pre {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 
+ELEMENTS
+*/
+
+  img {
+    border: 2px solid bisque;
+    display: block;
+    margin: 1rem auto;
+    width: 30%;
+  }
+  textarea {
+    border: 0.25px solid;
+    border-style: none;
+    width: 350px;
+    height: 50px;
+    resize: vertical;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  /* 
+CLASSES
+*/
+
+  .header-bar {
+    align-items: center;
+    display: flex;
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0.5;
+    box-shadow: 0 16px 64px 0 rgba(58, 66, 187, 0.651);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .text {
+    padding-right: 5px;
+    border-right: 2px solid;
+    border-radius: 1px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .fa-pencil {
+    padding-right: 5px;
+    border-right: 2px solid;
+    border-radius: 1px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .max {
+    margin-left: auto;
+    display: inline-block;
+  }
+
+  .max:hover {
+    color: rgb(216, 161, 93);
+  }
+
+  .card-edit {
+    width: 350px;
+  }
+
+  .card-header-preview {
+    width: 250px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.89);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preview {
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    padding: 20px;
+  }
+
+  .preview-output {
+    width: 650px;
+  }
+
+  .card-preview {
+    box-shadow: 0 32px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 650px;
+  }
+
+  .body {
+    background-color: bisque;
+  }
+
+  /* 
+ID
+*/
+
+  #ed {
+    margin-top: 50px;
+  }
+
+  #pre {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* 
+ELEMENTS
+*/
+
+  img {
+    border: 2px solid bisque;
+    display: block;
+    margin: 1.0rem auto;
+    width: 75%;
+  }
+  textarea {
+    border: 0.25px solid;
+    border-style: none;
+    width: 275px;
+    height: 50px;
+    resize: vertical;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  /* 
+CLASSES
+*/
+
+  .header-bar {
+    align-items: center;
+    display: flex;
+    padding: 4px;
+    font-size: 1.0rem;
+    font-weight: bold;
+    box-shadow: 0.5;
+    box-shadow: 0 16px 64px 0 rgba(58, 66, 187, 0.651);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .text {
+    padding-right: 2.5px;
+    border-right: 2px solid;
+    border-radius: 1px;
+    margin-right: 2.5px;
+    display: inline-block;
+  }
+  .fa-pencil {
+    padding-right: 2.5px;
+    border-right: 2px solid;
+    border-radius: 1px;
+    margin-right: 2.5 px;
+    display: inline-block;
+  }
+  .max {
+    margin-left: auto;
+    display: inline-block;
+  }
+
+  .max:hover {
+    color: rgb(216, 161, 93);
+  }
+
+  .card-edit {
+    width: 275px;
+  }
+
+  .card-header-preview {
+    width: 250px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.89);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preview {
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    padding: 30px;
+  }
+
+  .preview-output {
+    width: 320px;
+  }
+
+  .card-preview {
+    box-shadow: 0 32px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 320px;
+  }
+
+  .body {
+    background-color: bisque;
+  }
+
+  /* 
+ID
+*/
+
+  #ed {
+    margin-top: 50px;
+  }
+
+  #pre {
+    margin-top: 50px;
+  }
 }
